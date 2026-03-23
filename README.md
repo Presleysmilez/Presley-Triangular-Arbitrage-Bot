@@ -6,6 +6,7 @@ A Python-powered triangular arbitrage bot designed to identify and capitalize on
 
 A Python-powered bot that finds and (potentially) executes **triangular arbitrage** opportunities in cryptocurrency markets.
 
+
 Triangular arbitrage means finding price differences between **three** related pairs on the same exchange (e.g. BTC/USDT → ETH/BTC → ETH/USDT) to make risk-free(ish) profit.
 
 **⚠️ WARNING**  
@@ -25,3 +26,25 @@ This is for **educational purposes only**. Real trading involves:
    ```bash
    git clone https://github.com/Presleysmilez/presley-triangular-arbitrage-bot.git
    cd presley-triangular-arbitrage-bot
+
+2. install requirements 
+pip install -r requirements.txt
+
+3. Create.env file and add your API keys:
+
+BINANCE_API_KEY=your_key
+BINANCE_API_SECRET=your_secret
+
+
+Usage
+python main.py --exchange binance --simulate
+(Use --simulate for dry-run / no real trades)
+Configuration
+Edit config.py or config.json for:
+Which exchanges/pairs to scan
+Minimum profit threshold (e.g. 0.5%)
+Fee rates
+Contributing
+Pull requests welcome! Especially bug fixes or adding more exchanges.
+Disclaimer
+I am not responsible for any financial losses. Crypto markets are volatile — trade at your own risk.
